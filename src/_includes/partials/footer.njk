@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <a class="brand" href="{{ t.home }}">
+        <img src="/assets/img/logo.png" alt="Logo JISR">
+        <span class="brand-name">{{ t.siteName }}</span>
+      </a>
+      <p class="footer-tagline">{{ t.footerTagline }}</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>{{ t.footerNavTitle }}</h4>
+        <a href="{{ t.home }}">{{ t.nav.home }}</a>
+        <a href="{{ t.manifestoUrl }}">{{ t.nav.manifesto }}</a>
+        <a href="{{ t.articlesUrl }}">{{ t.nav.articles }}</a>
+        <a href="{{ t.joinUrl }}">{{ t.nav.join }}</a>
+        <a href="{{ t.contactUrl }}">{{ t.nav.contact }}</a>
+      </div>
+      <div class="footer-col">
+        <h4>{{ t.footerLangTitle }}</h4>
+        <a href="/">Français</a>
+        <a href="/en/">English</a>
+        <a href="/ar/">العربية</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; {% year %} {{ t.rights }}
+  </div>
+</footer>

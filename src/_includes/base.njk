@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ t.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} · {{ t.siteName }}</title>
+  <meta name="description" content="{{ description or t.footerTagline }}">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+  <meta property="og:title" content="{{ title }} · {{ t.siteName }}">
+  <meta property="og:description" content="{{ description or t.footerTagline }}">
+  <meta property="og:image" content="/assets/img/logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  {% include "partials/header.njk" %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <!-- Netlify Identity: makes the /admin publishing login work from invite emails -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

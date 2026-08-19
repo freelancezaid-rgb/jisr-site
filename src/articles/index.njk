@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: "Articles"
+description: "Les articles, tribunes et actualités publiés par le mouvement JISR."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.articles }}</span>
+    <h1>Articles &amp; actualités</h1>
+    <p class="lead">Parcours, tribunes, retours d'expérience et actualités du mouvement JISR.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    {% set posts = collections.articles_fr %}
+    {% if posts.length %}
+      <div class="article-grid">
+        {% for post in posts %}
+          <a class="article-card" href="{{ post.url }}">
+            <span class="date">{{ post.data.date | dateFr }}</span>
+            <h3>{{ post.data.title }}</h3>
+            <p>{{ post.data.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-state">{{ t.noArticles }}</p>
+    {% endif %}
+  </div>
+</section>

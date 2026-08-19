@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: "Rejoindre"
+description: "Rejoignez le mouvement JISR et partagez votre expérience, vos compétences et vos idées au service du Maroc."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.join }}</span>
+    <h1>Rejoignez le mouvement</h1>
+    <p class="lead">Médecin, ingénieur, entrepreneur, chercheur, avocat, étudiant, ou passionné par un autre domaine : dites-nous qui vous êtes et comment vous souhaitez contribuer.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <form class="jisr-form" name="rejoindre" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="rejoindre">
+      <p style="display:none;">
+        <label>Ne pas remplir : <input name="bot-field"></label>
+      </p>
+
+      <div class="field">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="country">Pays de résidence</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+
+      <div class="field">
+        <label for="domain">Domaine / profession</label>
+        <input type="text" id="domain" name="domain" placeholder="Ex : médecine, ingénierie, droit, entrepreneuriat…" required>
+      </div>
+
+      <div class="field">
+        <label for="message">Comment souhaitez-vous contribuer ?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Envoyer ma candidature</button>
+    </form>
+  </div>
+</section>

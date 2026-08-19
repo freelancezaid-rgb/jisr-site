@@ -1,0 +1,30 @@
+---
+title: "Articles"
+description: "Articles, op-eds and news published by the JISR movement."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.articles }}</span>
+    <h1>Articles &amp; news</h1>
+    <p class="lead">Personal journeys, op-eds, and news from the JISR movement.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    {% set posts = collections.articles_en %}
+    {% if posts.length %}
+      <div class="article-grid">
+        {% for post in posts %}
+          <a class="article-card" href="{{ post.url }}">
+            <span class="date">{{ post.data.date | dateEn }}</span>
+            <h3>{{ post.data.title }}</h3>
+            <p>{{ post.data.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-state">{{ t.noArticles }}</p>
+    {% endif %}
+  </div>
+</section>

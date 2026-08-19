@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.articles }}</span>
+    <h1>{{ title }}</h1>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="prose">
+      <p class="meta-line">
+        {{ t.publishedOn }}
+        {%- if lang == "en" %} {{ date | dateEn }}
+        {%- elif lang == "ar" %} {{ date | dateAr }}
+        {%- else %} {{ date | dateFr }}
+        {%- endif %}
+        {% if author %} · {{ author }}{% endif %}
+      </p>
+      {{ content | safe }}
+    </div>
+    <p style="text-align:center; margin-top:32px;">
+      <a class="btn btn-outline" href="{{ t.articlesUrl }}">{{ t.backToArticles }}</a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: "Contact"
+description: "Contactez le mouvement JISR."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.contact }}</span>
+    <h1>Contactez-nous</h1>
+    <p class="lead">Une question, une idée, une proposition de partenariat ? Écrivez-nous.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <form class="jisr-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none;">
+        <label>Ne pas remplir : <input name="bot-field"></label>
+      </p>
+
+      <div class="field">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Enables /admin login via Netlify Identity + Git Gateway (free).
+publish_mode: simple
+
+media_folder: "src/assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  - name: "articles_fr"
+    label: "Articles (Français)"
+    label_singular: "Article"
+    folder: "src/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "article.njk" }
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
+      - { label: "Description courte", name: "description", widget: "text" }
+      - { label: "Auteur", name: "author", widget: "string", default: "JISR - جسر", required: false }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "articles_en"
+    label: "Articles (English)"
+    label_singular: "Article"
+    folder: "src/en/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "article.njk" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
+      - { label: "Short description", name: "description", widget: "text" }
+      - { label: "Author", name: "author", widget: "string", default: "JISR - جسر", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "articles_ar"
+    label: "مقالات (عربي)"
+    label_singular: "مقال"
+    folder: "src/ar/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "article.njk" }
+      - { label: "اللغة", name: "lang", widget: "hidden", default: "ar" }
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "تاريخ النشر", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
+      - { label: "وصف مختصر", name: "description", widget: "text" }
+      - { label: "الكاتب", name: "author", widget: "string", default: "جسر - JISR", required: false }
+      - { label: "المحتوى", name: "body", widget: "markdown" }

@@ -1,0 +1,51 @@
+---
+layout: base.njk
+lang: ar
+title: "انضم إلينا"
+description: "انضم إلى حركة جسر وشارك خبرتك وكفاءاتك وأفكارك في خدمة المغرب."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.join }}</span>
+    <h1>انضم إلى الحركة</h1>
+    <p class="lead">طبيب، مهندس، رائد أعمال، باحث، محامٍ، طالب، أو شغوف بمجال آخر: أخبرنا من أنت وكيف تودّ المساهمة.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <form class="jisr-form" name="rejoindre-ar" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="rejoindre-ar">
+      <p style="display:none;">
+        <label>لا تملأ هذا الحقل: <input name="bot-field"></label>
+      </p>
+
+      <div class="field">
+        <label for="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="country">بلد الإقامة</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+
+      <div class="field">
+        <label for="domain">المجال / المهنة</label>
+        <input type="text" id="domain" name="domain" placeholder="مثال: الطب، الهندسة، القانون، ريادة الأعمال…" required>
+      </div>
+
+      <div class="field">
+        <label for="message">كيف تودّ المساهمة؟</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+    </form>
+  </div>
+</section>

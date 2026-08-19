@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: "Join us"
+description: "Join the JISR movement and share your experience, skills and ideas in service of Morocco."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.join }}</span>
+    <h1>Join the movement</h1>
+    <p class="lead">Doctor, engineer, entrepreneur, researcher, lawyer, student, or passionate about another field: tell us who you are and how you'd like to contribute.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <form class="jisr-form" name="join" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="join">
+      <p style="display:none;">
+        <label>Don't fill this out: <input name="bot-field"></label>
+      </p>
+
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="country">Country of residence</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+
+      <div class="field">
+        <label for="domain">Field / profession</label>
+        <input type="text" id="domain" name="domain" placeholder="E.g. medicine, engineering, law, entrepreneurship…" required>
+      </div>
+
+      <div class="field">
+        <label for="message">How would you like to contribute?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Submit application</button>
+    </form>
+  </div>
+</section>

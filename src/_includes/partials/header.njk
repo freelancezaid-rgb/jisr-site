@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ t.home }}">
+      <img src="/assets/img/logo.png" alt="Logo JISR">
+      <span class="brand-name">{{ t.siteName }}</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="{{ t.home }}" {% if page.url == t.home %}aria-current="page"{% endif %}>{{ t.nav.home }}</a>
+      <a href="{{ t.manifestoUrl }}" {% if page.url == t.manifestoUrl %}aria-current="page"{% endif %}>{{ t.nav.manifesto }}</a>
+      <a href="{{ t.articlesUrl }}" {% if page.url.startsWith(t.articlesUrl) %}aria-current="page"{% endif %}>{{ t.nav.articles }}</a>
+      <a href="{{ t.joinUrl }}" {% if page.url == t.joinUrl %}aria-current="page"{% endif %}>{{ t.nav.join }}</a>
+      <a href="{{ t.contactUrl }}" {% if page.url == t.contactUrl %}aria-current="page"{% endif %}>{{ t.nav.contact }}</a>
+    </nav>
+
+    <div class="lang-switch">
+      <a href="/" {% if lang == "fr" %}class="active"{% endif %}>FR</a>
+      <a href="/en/" {% if lang == "en" %}class="active"{% endif %}>EN</a>
+      <a href="/ar/" {% if lang == "ar" %}class="active"{% endif %}>AR</a>
+    </div>
+  </div>
+</header>

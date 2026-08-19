@@ -1,0 +1,46 @@
+---
+layout: base.njk
+lang: ar
+title: "اتصل بنا"
+description: "تواصل مع حركة جسر."
+---
+<section class="hero" style="padding-bottom:24px;">
+  <div class="container">
+    <span class="eyebrow">{{ t.nav.contact }}</span>
+    <h1>تواصل معنا</h1>
+    <p class="lead">سؤال، فكرة، أو اقتراح شراكة؟ راسلنا.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <form class="jisr-form" name="contact-ar" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact-ar">
+      <p style="display:none;">
+        <label>لا تملأ هذا الحقل: <input name="bot-field"></label>
+      </p>
+
+      <div class="field">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="subject">الموضوع</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="field">
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">إرسال</button>
+    </form>
+  </div>
+</section>
