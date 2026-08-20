@@ -4,6 +4,7 @@ title: "Communiqué de lancement : JISR, un mouvement pour les Marocains du mond
 date: 2026-08-19
 description: "JISR - جسر est un mouvement indépendant et apolitique qui a pour ambition de créer des ponts entre les Marocains établis à l'étranger et le Maroc."
 author: "JISR - جسر"
+authorPhoto: "/assets/img/uploads/auteur-communique-lancement.png"
 ---
 Paris, 19 août 2026 - JISR - جسر est un mouvement indépendant et apolitique qui a pour ambition de créer des ponts entre les Marocains établis à l'étranger et le Maroc, en mettant au cœur de sa démarche les compétences, les expériences et les idées.
 

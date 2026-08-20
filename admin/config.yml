@@ -21,6 +21,7 @@ collections:
       - { label: "Date de publication", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
       - { label: "Description courte", name: "description", widget: "text" }
       - { label: "Auteur", name: "author", widget: "string", default: "JISR - جسر", required: false }
+      - { label: "Photo de l'auteur", name: "authorPhoto", widget: "image", required: false, hint: "Optionnel — une photo carrée fonctionne le mieux." }
       - { label: "Contenu", name: "body", widget: "markdown" }
 
   - name: "articles_en"
@@ -36,6 +37,7 @@ collections:
       - { label: "Publish date", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
       - { label: "Short description", name: "description", widget: "text" }
       - { label: "Author", name: "author", widget: "string", default: "JISR - جسر", required: false }
+      - { label: "Author photo", name: "authorPhoto", widget: "image", required: false, hint: "Optional — a square photo works best." }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "articles_ar"
@@ -51,4 +53,5 @@ collections:
       - { label: "تاريخ النشر", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
       - { label: "وصف مختصر", name: "description", widget: "text" }
       - { label: "الكاتب", name: "author", widget: "string", default: "جسر - JISR", required: false }
+      - { label: "صورة الكاتب", name: "authorPhoto", widget: "image", required: false, hint: "اختياري — يفضل استخدام صورة مربعة." }
       - { label: "المحتوى", name: "body", widget: "markdown" }

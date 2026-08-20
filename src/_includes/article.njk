@@ -11,6 +11,9 @@ layout: base.njk
 <section style="padding-top:0;">
   <div class="container">
     <div class="prose">
+      {% if authorPhoto %}
+        <img class="author-photo" src="{{ authorPhoto }}" alt="{{ author or t.siteName }}">
+      {% endif %}
       <p class="meta-line">
         {{ t.publishedOn }}
         {%- if lang == "en" %} {{ date | dateEn }}
@@ -20,6 +23,7 @@ layout: base.njk
         {% if author %} · {{ author }}{% endif %}
       </p>
       {{ content | safe }}
+      <div style="clear: both;"></div>
     </div>
     <p style="text-align:center; margin-top:32px;">
       <a class="btn btn-outline" href="{{ t.articlesUrl }}">{{ t.backToArticles }}</a>

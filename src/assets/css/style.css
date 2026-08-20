@@ -270,6 +270,22 @@ section { padding: 56px 0; }
   margin: 0 auto;
 }
 
+.author-photo {
+  float: inline-start;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-inline-end: 20px;
+  margin-block-end: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--jisr-border);
+}
+
+@media (max-width: 480px) {
+  .author-photo { width: 84px; height: 84px; margin-inline-end: 14px; }
+}
+
 .prose h2 { color: var(--jisr-green); }
 .prose p { margin: 0 0 18px; }
 .prose p:last-child { margin-bottom: 0; }
