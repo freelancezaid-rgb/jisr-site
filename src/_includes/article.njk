@@ -25,8 +25,98 @@ layout: base.njk
       {{ content | safe }}
       <div style="clear: both;"></div>
     </div>
+
+    {% set absoluteUrl = site.url + page.url %}
+    <div class="share-section">
+      <p class="share-title">{{ t.share.title }}</p>
+      <div class="share-row">
+        <a class="share-badge whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"
+           href="https://wa.me/?text={{ (title + ' - ' + absoluteUrl) | urlencode }}">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2.05 22l5.28-1.38a9.87 9.87 0 0 0 4.71 1.2h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.12h-.01a8.21 8.21 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.26-8.24a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.99-1.22a7.5 7.5 0 0 1-1.38-1.72c-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+        </a>
+        <button type="button" class="share-badge instagram" id="share-instagram-btn" aria-label="Instagram" data-title="{{ title }}" data-url="{{ absoluteUrl }}" data-hint="{{ t.share.instagramHint }}">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </button>
+        <a class="share-badge x" target="_blank" rel="noopener" aria-label="X"
+           href="https://twitter.com/intent/tweet?text={{ title | urlencode }}&amp;url={{ absoluteUrl | urlencode }}">X</a>
+        <a class="share-badge facebook" target="_blank" rel="noopener" aria-label="Facebook"
+           href="https://www.facebook.com/sharer/sharer.php?u={{ absoluteUrl | urlencode }}">f</a>
+        <a class="share-badge linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"
+           href="https://www.linkedin.com/sharing/share-offsite/?url={{ absoluteUrl | urlencode }}">in</a>
+        <a class="share-badge email" aria-label="Email"
+           href="mailto:?subject={{ title | urlencode }}&amp;body={{ absoluteUrl | urlencode }}">@</a>
+        <button type="button" class="share-copy-btn" id="share-copy-btn" data-url="{{ absoluteUrl }}" data-label="{{ t.share.copy }}" data-copied="{{ t.share.copied }}">{{ t.share.copy }}</button>
+        <button type="button" class="share-copy-btn share-native-btn" id="share-native-btn" data-title="{{ title }}" data-url="{{ absoluteUrl }}">{{ t.share.native }}</button>
+      </div>
+      <p class="share-toast" id="share-toast" aria-live="polite"></p>
+    </div>
+
     <p style="text-align:center; margin-top:32px;">
       <a class="btn btn-outline" href="{{ t.articlesUrl }}">{{ t.backToArticles }}</a>
     </p>
   </div>
 </section>
+
+<script>
+  (function () {
+    var copyBtn = document.getElementById("share-copy-btn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        var url = copyBtn.getAttribute("data-url");
+        var done = function () {
+          copyBtn.textContent = copyBtn.getAttribute("data-copied");
+          setTimeout(function () {
+            copyBtn.textContent = copyBtn.getAttribute("data-label");
+          }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(function () {
+            window.prompt("Ctrl+C / Cmd+C", url);
+          });
+        } else {
+          window.prompt("Ctrl+C / Cmd+C", url);
+        }
+      });
+    }
+
+    var nativeBtn = document.getElementById("share-native-btn");
+    if (nativeBtn && navigator.share) {
+      nativeBtn.classList.add("supported");
+      nativeBtn.addEventListener("click", function () {
+        navigator.share({
+          title: nativeBtn.getAttribute("data-title"),
+          url: nativeBtn.getAttribute("data-url"),
+        }).catch(function () {});
+      });
+    }
+
+    // Instagram has no public "share with prefilled content" link, so:
+    // on phones, open the native share sheet (Instagram appears there);
+    // on desktop, copy the link and show a short hint instead.
+    var igBtn = document.getElementById("share-instagram-btn");
+    var toast = document.getElementById("share-toast");
+    if (igBtn) {
+      igBtn.addEventListener("click", function () {
+        var title = igBtn.getAttribute("data-title");
+        var url = igBtn.getAttribute("data-url");
+        if (navigator.share) {
+          navigator.share({ title: title, url: url }).catch(function () {});
+          return;
+        }
+        var showHint = function () {
+          if (toast) {
+            toast.textContent = igBtn.getAttribute("data-hint");
+            setTimeout(function () { toast.textContent = ""; }, 3500);
+          }
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(showHint).catch(function () {
+            window.prompt("Ctrl+C / Cmd+C", url);
+          });
+        } else {
+          window.prompt("Ctrl+C / Cmd+C", url);
+        }
+      });
+    }
+  })();
+</script>

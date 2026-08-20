@@ -44,6 +44,12 @@ description: "Rejoignez le mouvement JISR et partagez votre expérience, vos com
         <textarea id="message" name="message" required></textarea>
       </div>
 
+      {% set privacyLink = '<a href="' + t.privacyUrl + '" target="_blank">' + t.privacyLabel + '</a>' %}
+      <div class="field-checkbox">
+        <input type="checkbox" id="consent" name="consent" value="oui" required>
+        <label for="consent">{{ t.consentLabel | replace("{privacyLink}", privacyLink) | safe }}</label>
+      </div>
+
       <button class="btn btn-primary" type="submit">Envoyer ma candidature</button>
     </form>
   </div>
