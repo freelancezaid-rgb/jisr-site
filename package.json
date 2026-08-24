@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
+    "build": "node scripts/fix-invalid-dates.js && eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
