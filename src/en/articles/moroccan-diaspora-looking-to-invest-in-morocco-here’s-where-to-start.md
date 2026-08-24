@@ -2,7 +2,7 @@
 layout: article.njk
 lang: en
 title: "Moroccan Diaspora: Looking to Invest in Morocco? Here’s Where to Start"
-date: yyyy-08-Mo
+date: 2026-08-24
 description: Morocco has expanded the range of tools available to its diaspora
   looking to invest back home. From dedicated funding schemes to Investment
   Charter incentives and regional support, navigating the options is becoming an
