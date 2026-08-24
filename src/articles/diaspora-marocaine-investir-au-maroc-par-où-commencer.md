@@ -1,7 +1,7 @@
 ---
 layout: article.njk
 title: "Diaspora marocaine : investir au Maroc, par où commencer ?"
-date: yyyy-08-Mo
+date: 2026-08-24
 description: "Primes à l’investissement, solutions de financement, incitations
   de la Charte de l’investissement ou accompagnement régional : plusieurs
   mécanismes sont accessibles aux Marocains établis à l’étranger qui souhaitent
