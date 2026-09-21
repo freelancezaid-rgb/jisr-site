@@ -3,39 +3,51 @@ layout: base.njk
 title: "Accueil"
 description: "JISR - جسر, mouvement indépendant qui crée des ponts entre les Marocains du monde et le Maroc."
 ---
-<section class="hero">
+<section class="hero-home">
+  <span class="hero-ghost" aria-hidden="true">جسر</span>
   <div class="container">
-    <span class="eyebrow">Communiqué de lancement · 19 août 2026</span>
-    <h1>Créer des ponts. Faire circuler les idées.<br>Rapprocher les compétences.</h1>
-    <p class="lead">JISR - جسر est un mouvement indépendant et apolitique qui a pour ambition de créer des ponts entre les Marocains établis à l'étranger et le Maroc, en mettant au cœur de sa démarche les compétences, les expériences et les idées.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="/rejoindre/">Rejoindre le mouvement</a>
-      <a class="btn btn-outline" href="/manifeste/">Découvrir le manifeste</a>
+    <div class="hero-copy">
+      <span class="eyebrow">Communiqué de lancement · 19 août 2026</span>
+      <h1><span class="line">Créer des <span class="mark">ponts</span>.</span><span class="line">Faire circuler les idées. Rapprocher les compétences.</span></h1>
+      <p class="lead">JISR - جسر est un mouvement indépendant et apolitique qui a pour ambition de créer des ponts entre les Marocains établis à l'étranger et le Maroc, en mettant au cœur de sa démarche les compétences, les expériences et les idées.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/rejoindre/">Rejoindre le mouvement <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost-light" href="/manifeste/">Découvrir le manifeste</a>
+      </div>
+      <ul class="hero-badges">
+      <li>Indépendant</li>
+      <li>Apolitique</li>
+      <li>Un espace ouvert</li>
+      </ul>
     </div>
+    {% include "partials/bridge.njk" %}
   </div>
 </section>
 
 <section>
   <div class="container">
-    <h2 class="section-title">Nos quatre principes</h2>
-    <p class="section-sub">Le mouvement s'articule autour de quatre principes qui guident chacune de nos actions.</p>
-    <div class="pillars">
-      <div class="pillar-card">
+    <div class="section-head reveal">
+      <span class="eyebrow">Notre manifeste</span>
+      <h2 class="section-title">Nos quatre principes</h2>
+      <p class="section-sub">Le mouvement s'articule autour de quatre principes qui guident chacune de nos actions.</p>
+    </div>
+    <div class="pillars pillars--arch">
+      <div class="pillar-card reveal">
         <span class="num">1</span>
         <h3>Connecter</h3>
         <p>Relier les Marocains du monde entre eux et avec les acteurs du Maroc.</p>
       </div>
-      <div class="pillar-card">
+      <div class="pillar-card reveal">
         <span class="num">2</span>
         <h3>Contribuer</h3>
         <p>Mettre les compétences et les expériences de chacun au service du développement du pays.</p>
       </div>
-      <div class="pillar-card">
+      <div class="pillar-card reveal">
         <span class="num">3</span>
         <h3>Transmettre</h3>
         <p>Faire circuler les savoirs, les idées et les parcours entre générations et territoires.</p>
       </div>
-      <div class="pillar-card">
+      <div class="pillar-card reveal">
         <span class="num">4</span>
         <h3>Agir</h3>
         <p>Passer des intentions aux projets concrets, avec et pour le Maroc.</p>
@@ -44,15 +56,65 @@ description: "JISR - جسر, mouvement indépendant qui crée des ponts entre le
   </div>
 </section>
 
+<section class="profiles">
+  <div class="container profiles-grid">
+    <div class="reveal">
+      <span class="eyebrow">Qui peut rejoindre ?</span>
+      <h2 class="section-title">Votre parcours a sa place chez JISR</h2>
+      <p class="section-sub" style="margin-bottom:26px;">Quel que soit votre pays de résidence, votre domaine ou votre génération.</p>
+      <a class="btn btn-primary" href="/rejoindre/">Rejoindre le mouvement <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <ul class="chips reveal">
+        <li>Médecins</li>
+        <li>Ingénieurs</li>
+        <li>Entrepreneurs</li>
+        <li>Chercheurs</li>
+        <li>Avocats</li>
+        <li>Étudiants</li>
+        <li>Et bien d'autres talents</li>
+    </ul>
+  </div>
+</section>
+
 <section>
-  <div class="container">
-    <h2 class="section-title">Le communiqué de lancement</h2>
-    <div class="prose">
+  <div class="container letter-grid">
+    <div class="letter-side reveal">
+      <span class="eyebrow">Communiqué</span>
+      <h2 class="section-title">Le communiqué de lancement</h2>
       <p class="meta-line">Paris, 19 août 2026</p>
-      <p>Le constat est simple : partout dans le monde, des médecins, ingénieurs, entrepreneurs, chercheurs, avocats, étudiants et de nombreux autres talents souhaitent maintenir un lien avec le Maroc et contribuer, à leur manière, à son développement.</p>
+    </div>
+    <div class="prose prose--letter reveal">
+      <p class="first">Le constat est simple : partout dans le monde, des médecins, ingénieurs, entrepreneurs, chercheurs, avocats, étudiants et de nombreux autres talents souhaitent maintenir un lien avec le Maroc et contribuer, à leur manière, à son développement.</p>
       <p>JISR veut faciliter ces connexions, mettre en lumière ces parcours et créer des passerelles avec les acteurs économiques, académiques, associatifs et institutionnels au Maroc.</p>
       <p>Apolitique et indépendant de tout parti ou organisation politique, JISR n'a pas vocation à parler au nom de tous les Marocains du monde. Il souhaite avant tout créer un espace ouvert à celles et ceux qui veulent partager leur expérience, leurs compétences et leurs idées au service du Maroc.</p>
       <p class="signature">JISR - جسر</p>
+    </div>
+  </div>
+</section>
+
+{% set posts = collections.articles_fr %}
+{% if posts.length %}
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="section-row">
+      <h2 class="section-title">{{ t.latest }}</h2>
+      <a class="link-arrow" href="{{ t.articlesUrl }}">{{ t.allArticles }} <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    {% set maxItems = 3 %}
+    {% include "partials/article-list.njk" %}
+  </div>
+</section>
+{% endif %}
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Rejoignez le mouvement</h2>
+      <p>Que vous soyez médecin, ingénieur, entrepreneur, chercheur, avocat, étudiant ou passionné par un autre domaine, votre parcours a sa place chez JISR.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="/rejoindre/">Rejoindre JISR <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost-light" href="/contact/">Nous écrire</a>
+      </div>
     </div>
   </div>
 </section>

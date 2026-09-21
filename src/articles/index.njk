@@ -14,18 +14,7 @@ description: "Les articles, tribunes et actualités publiés par le mouvement JI
 <section style="padding-top:0;">
   <div class="container">
     {% set posts = collections.articles_fr %}
-    {% if posts.length %}
-      <div class="article-grid">
-        {% for post in posts %}
-          <a class="article-card" href="{{ post.url }}">
-            <span class="date">{{ post.data.date | dateFr }}</span>
-            <h3>{{ post.data.title }}</h3>
-            <p>{{ post.data.description }}</p>
-          </a>
-        {% endfor %}
-      </div>
-    {% else %}
-      <p class="empty-state">{{ t.noArticles }}</p>
-    {% endif %}
+    {% set featured = true %}
+    {% include "partials/article-list.njk" %}
   </div>
 </section>

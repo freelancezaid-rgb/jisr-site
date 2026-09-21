@@ -1,29 +1,28 @@
 ---
 layout: base.njk
 ---
-<section class="hero" style="padding-bottom:24px;">
-  <div class="container">
-    <span class="eyebrow">{{ t.nav.articles }}</span>
+<header class="article-head">
+  <div class="container narrow">
+    <a class="crumb" href="{{ t.articlesUrl }}">{{ t.backToArticles }}</a>
     <h1>{{ title }}</h1>
+    <div class="byline">
+      {% if authorPhoto %}<img class="byline-photo" src="{{ authorPhoto }}" alt="" width="58" height="58">{% endif %}
+      <div class="byline-text">
+        {% if author %}<strong>{{ author }}</strong>{% endif %}
+        <span>{{ t.publishedOn }}
+          {%- if lang == "en" %} {{ date | dateEn }}
+          {%- elif lang == "ar" %} {{ date | dateAr }}
+          {%- else %} {{ date | dateFr }}
+          {%- endif %}</span>
+      </div>
+    </div>
   </div>
-</section>
+</header>
 
-<section style="padding-top:0;">
-  <div class="container">
+<section class="article-body">
+  <div class="container narrow">
     <div class="prose">
-      {% if authorPhoto %}
-        <img class="author-photo" src="{{ authorPhoto }}" alt="{{ author or t.siteName }}">
-      {% endif %}
-      <p class="meta-line">
-        {{ t.publishedOn }}
-        {%- if lang == "en" %} {{ date | dateEn }}
-        {%- elif lang == "ar" %} {{ date | dateAr }}
-        {%- else %} {{ date | dateFr }}
-        {%- endif %}
-        {% if author %} · {{ author }}{% endif %}
-      </p>
       {{ content | safe }}
-      <div style="clear: both;"></div>
     </div>
 
     {% set absoluteUrl = site.url + page.url %}
@@ -51,7 +50,7 @@ layout: base.njk
       <p class="share-toast" id="share-toast" aria-live="polite"></p>
     </div>
 
-    <p style="text-align:center; margin-top:32px;">
+    <p class="article-back">
       <a class="btn btn-outline" href="{{ t.articlesUrl }}">{{ t.backToArticles }}</a>
     </p>
   </div>

@@ -1,0 +1,21 @@
+{# Expects: posts (collection), optional maxItems, optional featured (bool) #}
+{% if posts.length %}
+  <div class="article-grid{% if featured %} has-featured{% endif %}">
+    {% for post in posts %}
+      {% if not maxItems or loop.index <= maxItems %}
+      <a class="article-card{% if featured and loop.first %} is-featured{% endif %} reveal" href="{{ post.url }}">
+        <span class="date">
+          {%- if lang == "en" %}{{ post.data.date | dateEn }}
+          {%- elif lang == "ar" %}{{ post.data.date | dateAr }}
+          {%- else %}{{ post.data.date | dateFr }}{% endif -%}
+        </span>
+        <h3>{{ post.data.title }}</h3>
+        {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+        <span class="read-more">{{ t.readMore }} <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="empty-state">{{ t.noArticles }}</p>
+{% endif %}

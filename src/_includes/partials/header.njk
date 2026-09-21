@@ -1,22 +1,30 @@
-<header class="site-header">
-  <div class="container">
+<header class="site-header" data-header>
+  <div class="container header-inner">
     <a class="brand" href="{{ t.home }}">
-      <img src="/assets/img/logo.png" alt="Logo JISR">
-      <span class="brand-name">{{ t.siteName }}</span>
+      <img class="brand-mark" src="/assets/img/logo-mark.png" alt="" width="72" height="44">
+      <span class="brand-lockup">
+        <span class="brand-word">{{ t.siteName }}</span>
+        <span class="brand-alt" aria-hidden="true">{% if lang == "ar" %}JISR{% else %}جسر{% endif %}</span>
+      </span>
     </a>
 
-    <nav class="main-nav" aria-label="Navigation principale">
+    <nav class="main-nav" id="main-nav" aria-label="{{ t.navLabel }}">
       <a href="{{ t.home }}" {% if page.url == t.home %}aria-current="page"{% endif %}>{{ t.nav.home }}</a>
       <a href="{{ t.manifestoUrl }}" {% if page.url == t.manifestoUrl %}aria-current="page"{% endif %}>{{ t.nav.manifesto }}</a>
       <a href="{{ t.articlesUrl }}" {% if page.url.startsWith(t.articlesUrl) %}aria-current="page"{% endif %}>{{ t.nav.articles }}</a>
-      <a href="{{ t.joinUrl }}" {% if page.url == t.joinUrl %}aria-current="page"{% endif %}>{{ t.nav.join }}</a>
       <a href="{{ t.contactUrl }}" {% if page.url == t.contactUrl %}aria-current="page"{% endif %}>{{ t.nav.contact }}</a>
+      <a class="nav-cta" href="{{ t.joinUrl }}" {% if page.url == t.joinUrl %}aria-current="page"{% endif %}>{{ t.nav.join }}</a>
     </nav>
 
-    <div class="lang-switch">
-      <a href="/" {% if lang == "fr" %}class="active"{% endif %}>FR</a>
-      <a href="/en/" {% if lang == "en" %}class="active"{% endif %}>EN</a>
-      <a href="/ar/" {% if lang == "ar" %}class="active"{% endif %}>AR</a>
+    <div class="lang-switch" role="group" aria-label="{{ t.langAria }}">
+      <a href="{{ langLinks.fr }}" hreflang="fr" lang="fr" {% if lang == "fr" %}class="active" aria-current="true"{% endif %}>FR</a>
+      <a href="{{ langLinks.en }}" hreflang="en" lang="en" {% if lang == "en" %}class="active" aria-current="true"{% endif %}>EN</a>
+      <a href="{{ langLinks.ar }}" hreflang="ar" lang="ar" {% if lang == "ar" %}class="active" aria-current="true"{% endif %}>AR</a>
     </div>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+      <span class="visually-hidden">{{ t.menu }}</span>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
   </div>
 </header>
