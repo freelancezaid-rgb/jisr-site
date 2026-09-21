@@ -1,0 +1,918 @@
+{
+  "ui": {
+    "botName": "Assistant JISR",
+    "title": "Assistant JISR",
+    "status": "Réponses automatiques",
+    "teaser": "Une question sur JISR ?",
+    "open": "Ouvrir l'assistant",
+    "close": "Fermer l'assistant",
+    "welcome": "Bonjour ! Je réponds aux questions sur JISR. Choisissez un sujet ou écrivez votre question.",
+    "suggestionsTitle": "Questions fréquentes",
+    "relatedTitle": "Vous pouvez aussi demander",
+    "placeholder": "Écrivez votre question…",
+    "send": "Envoyer",
+    "fallback": "Je n'ai pas la réponse à cette question. Choisissez un sujet ci-dessous, ou écrivez-nous directement.",
+    "fallbackLink": {
+      "label": "Nous écrire",
+      "url": "/contact/"
+    },
+    "didYouMean": "Vous pensiez peut-être à :",
+    "disclaimer": "Assistant automatique : il répond uniquement à partir des informations publiées sur ce site.",
+    "typing": "L'assistant écrit…",
+    "restart": "Nouvelle conversation",
+    "tooShort": "Écrivez votre question en quelques mots."
+  },
+  "blockers": [
+    "cotisation",
+    "cotisations",
+    "tarif",
+    "tarifs",
+    "prix",
+    "coûte",
+    "coûter",
+    "coût",
+    "gratuit",
+    "gratuite",
+    "payant",
+    "payer",
+    "événement",
+    "événements",
+    "évènement",
+    "évènements",
+    "rencontre",
+    "rencontres",
+    "conférence",
+    "conférences",
+    "meetup",
+    "bénévole",
+    "bénévoles",
+    "bénévolat",
+    "fondateur",
+    "fondateurs",
+    "fondatrice",
+    "fondé",
+    "fondée",
+    "fondation",
+    "statut juridique",
+    "juridique",
+    "président",
+    "présidente",
+    "siège",
+    "salarié",
+    "salariés",
+    "faire un don",
+    "dons",
+    "donation"
+  ],
+  "items": [
+    {
+      "id": "jisr-quoi",
+      "question": "Qu'est-ce que JISR ?",
+      "variants": [
+        "c'est quoi jisr",
+        "qui est jisr",
+        "qui êtes-vous",
+        "présentez jisr",
+        "parlez-moi de jisr",
+        "jisr c'est quoi",
+        "jisr c koi",
+        "de quoi s'agit-il",
+        "à propos de jisr",
+        "présentation du mouvement"
+      ],
+      "keywords": [
+        "présentation",
+        "présenter",
+        "propos",
+        "mouvement",
+        "association",
+        "organisation",
+        "kesako",
+        "définition",
+        "jisr",
+        "expliquer",
+        "explique"
+      ],
+      "answer": "JISR - جسر est un mouvement indépendant et apolitique qui a pour ambition de créer des ponts entre les Marocains établis à l'étranger et le Maroc, en mettant au cœur de sa démarche les compétences, les expériences et les idées.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "mission",
+        "principes",
+        "politique"
+      ]
+    },
+    {
+      "id": "signification",
+      "question": "Que signifie « JISR » ?",
+      "variants": [
+        "que signifie jisr",
+        "que veut dire jisr",
+        "jisr signifie quoi",
+        "signification de jisr",
+        "pourquoi ce nom",
+        "d'où vient le nom jisr",
+        "que veut dire ce nom",
+        "que signifie ce mot",
+        "ça veut dire quoi",
+        "le mot jisr ça veut dire quoi",
+        "pourquoi avoir choisi ce nom"
+      ],
+      "keywords": [
+        "signifie",
+        "signification",
+        "sens",
+        "pont",
+        "étymologie",
+        "nom",
+        "mot",
+        "choisi",
+        "choisir"
+      ],
+      "answer": "« Jisr » (جسر) signifie « pont » en arabe. C'est l'image du mouvement : créer des liens entre les Marocains du monde, et avec le Maroc.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "jisr-quoi",
+        "mission"
+      ]
+    },
+    {
+      "id": "mission",
+      "question": "Quelle est la mission du mouvement ?",
+      "variants": [
+        "quelle est votre mission",
+        "quels sont vos objectifs",
+        "quel est le but de jisr",
+        "que fait jisr",
+        "que faites-vous",
+        "à quoi sert jisr",
+        "pourquoi jisr",
+        "quelle est la vocation de jisr",
+        "quelle est votre ambition",
+        "quel est votre rôle"
+      ],
+      "keywords": [
+        "mission",
+        "objectif",
+        "objectifs",
+        "but",
+        "ambition",
+        "vocation",
+        "rôle",
+        "raison",
+        "pourquoi",
+        "utilité",
+        "servir",
+        "actions",
+        "projets"
+      ],
+      "answer": "Créer des ponts entre les Marocains établis à l'étranger et le Maroc, en faisant circuler les idées et en rapprochant les compétences. JISR veut faciliter ces connexions, mettre en lumière les parcours et créer des passerelles avec les acteurs économiques, académiques, associatifs et institutionnels au Maroc.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "principes",
+        "acteurs-maroc",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "principes",
+      "question": "Quels sont les quatre principes de JISR ?",
+      "variants": [
+        "quels sont vos principes",
+        "quelles sont vos valeurs",
+        "connecter contribuer transmettre agir",
+        "les 4 principes",
+        "les quatre principes",
+        "explique les principes",
+        "quels sont les principes du mouvement"
+      ],
+      "keywords": [
+        "principe",
+        "principes",
+        "valeur",
+        "valeurs",
+        "pilier",
+        "piliers",
+        "quatre",
+        "manifeste",
+        "charte",
+        "4"
+      ],
+      "answer": "Le mouvement s'articule autour de quatre principes :\n1. Connecter : créer des liens entre les Marocains du monde, quel que soit leur pays de résidence, leur domaine ou leur génération, et avec les acteurs du Maroc.\n2. Contribuer : mobiliser les compétences et les expériences de chacun, ponctuellement ou dans la durée, au service de projets concrets pour le Maroc.\n3. Transmettre : faire circuler les savoirs, les parcours et les bonnes pratiques entre pairs, entre générations et entre territoires.\n4. Agir : aller au-delà des intentions, initier et soutenir des actions concrètes, avec et pour le Maroc.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "mission",
+        "contribuer",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "politique",
+      "question": "JISR est-il un parti politique ?",
+      "variants": [
+        "jisr est un parti politique",
+        "êtes-vous un parti politique",
+        "êtes-vous affilié à un parti",
+        "jisr est-il apolitique",
+        "que pense jisr de la politique",
+        "quelle est votre position politique",
+        "jisr est-il neutre",
+        "prenez-vous position",
+        "êtes-vous indépendants"
+      ],
+      "keywords": [
+        "politique",
+        "politiques",
+        "parti",
+        "partis",
+        "apolitique",
+        "indépendant",
+        "indépendante",
+        "neutre",
+        "neutralité",
+        "élection",
+        "élections",
+        "gouvernement",
+        "opinion",
+        "position",
+        "affilié",
+        "affiliation",
+        "idéologie",
+        "militant"
+      ],
+      "answer": "Non. JISR est indépendant et apolitique : le mouvement n'est affilié à aucun parti ni organisation politique, et n'agit au nom d'aucune institution. Il ne prend donc pas position sur les sujets politiques.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "porte-parole",
+        "jisr-quoi",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "porte-parole",
+      "question": "JISR parle-t-il au nom de tous les Marocains du monde ?",
+      "variants": [
+        "jisr représente-t-il tous les marocains",
+        "parlez-vous au nom de tous",
+        "êtes-vous représentatifs",
+        "qui représentez-vous",
+        "êtes-vous porte-parole",
+        "jisr représente les marocains du monde",
+        "au nom de qui parlez-vous"
+      ],
+      "keywords": [
+        "porte",
+        "parole",
+        "représente",
+        "représentez",
+        "représentatif",
+        "représentation",
+        "représentant",
+        "légitimité",
+        "légitime"
+      ],
+      "answer": "Non. JISR n'a pas vocation à parler au nom de tous les Marocains du monde. Le mouvement souhaite avant tout créer un espace ouvert à celles et ceux qui veulent partager leur expérience, leurs compétences et leurs idées au service du Maroc.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "politique",
+        "mission",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "lancement",
+      "question": "Quand JISR a-t-il été lancé ?",
+      "variants": [
+        "quand jisr a été créé",
+        "depuis quand existez-vous",
+        "date de création",
+        "date de lancement",
+        "quand a été lancé le mouvement",
+        "quelle est la date du communiqué",
+        "jisr existe depuis quand",
+        "quand avez-vous commencé"
+      ],
+      "keywords": [
+        "lancement",
+        "lancé",
+        "lancer",
+        "créé",
+        "création",
+        "naissance",
+        "quand",
+        "depuis",
+        "date",
+        "communiqué",
+        "annoncé",
+        "annonce",
+        "début",
+        "commencé"
+      ],
+      "answer": "JISR a annoncé son lancement par un communiqué publié à Paris le 19 août 2026.",
+      "links": [
+        {
+          "label": "Lire le communiqué de lancement",
+          "url": "/articles/communique-de-lancement/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "jisr-quoi",
+        "articles",
+        "mission"
+      ]
+    },
+    {
+      "id": "qui-rejoindre",
+      "question": "Qui peut rejoindre JISR ?",
+      "variants": [
+        "qui peut rejoindre",
+        "qui peut adhérer",
+        "qui peut participer",
+        "puis-je rejoindre jisr",
+        "suis-je éligible",
+        "quel profil recherchez-vous",
+        "ouvert à qui",
+        "je suis médecin puis-je rejoindre",
+        "je suis étudiant puis-je participer"
+      ],
+      "keywords": [
+        "éligible",
+        "profil",
+        "profils",
+        "ouvert",
+        "médecin",
+        "médecins",
+        "ingénieur",
+        "ingénieurs",
+        "entrepreneur",
+        "entrepreneurs",
+        "chercheur",
+        "chercheurs",
+        "avocat",
+        "avocats",
+        "étudiant",
+        "étudiants"
+      ],
+      "answer": "Médecins, ingénieurs, entrepreneurs, chercheurs, avocats, étudiants ou passionnés par un autre domaine : votre parcours a sa place chez JISR. Le mouvement crée des liens entre les Marocains du monde, quel que soit leur pays de résidence, leur domaine ou leur génération.",
+      "links": [
+        {
+          "label": "Rejoindre JISR",
+          "url": "/rejoindre/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "contribuer",
+        "donnees"
+      ]
+    },
+    {
+      "id": "comment-rejoindre",
+      "question": "Comment rejoindre le mouvement ?",
+      "variants": [
+        "comment rejoindre jisr",
+        "comment adhérer",
+        "comment s'inscrire",
+        "comment participer",
+        "je veux rejoindre jisr",
+        "je veux participer",
+        "comment devenir membre",
+        "comment m'inscrire",
+        "où s'inscrire",
+        "formulaire d'inscription",
+        "comment faire pour rejoindre"
+      ],
+      "keywords": [
+        "rejoindre",
+        "adhérer",
+        "adhésion",
+        "inscrire",
+        "inscription",
+        "inscrit",
+        "candidature",
+        "candidat",
+        "candidater",
+        "formulaire",
+        "intégrer"
+      ],
+      "answer": "Il suffit de remplir le formulaire de la page « Rejoindre » : dites-nous qui vous êtes et comment vous souhaitez contribuer.",
+      "links": [
+        {
+          "label": "Rejoindre JISR",
+          "url": "/rejoindre/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "qui-rejoindre",
+        "donnees",
+        "contact"
+      ]
+    },
+    {
+      "id": "contribuer",
+      "question": "Comment puis-je contribuer ?",
+      "variants": [
+        "comment contribuer",
+        "comment puis-je aider",
+        "comment aider jisr",
+        "comment participer concrètement",
+        "je veux aider",
+        "je souhaite contribuer",
+        "comment mettre mes compétences au service du maroc",
+        "comment m'impliquer",
+        "comment m'engager"
+      ],
+      "keywords": [
+        "contribuer",
+        "contribution",
+        "contribue",
+        "aider",
+        "expertise",
+        "offrir",
+        "compétences",
+        "compétence",
+        "expérience",
+        "idée",
+        "idées",
+        "impliquer",
+        "implication",
+        "engager",
+        "engagement",
+        "concrètement"
+      ],
+      "answer": "Chacun peut contribuer avec ses compétences, son expérience et ses idées, ponctuellement ou dans la durée, au service de projets concrets pour le Maroc. Pour commencer, remplissez le formulaire de la page « Rejoindre » et dites-nous comment vous souhaitez contribuer.",
+      "links": [
+        {
+          "label": "Rejoindre JISR",
+          "url": "/rejoindre/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "principes",
+        "acteurs-maroc"
+      ]
+    },
+    {
+      "id": "acteurs-maroc",
+      "question": "JISR met-il en relation avec des acteurs au Maroc ?",
+      "variants": [
+        "jisr crée-t-il des liens avec le maroc",
+        "travaillez-vous avec des institutions",
+        "avec quels acteurs travaillez-vous",
+        "jisr aide-t-il à entrer en contact avec des entreprises au maroc",
+        "mise en relation",
+        "passerelles avec le maroc",
+        "réseau au maroc"
+      ],
+      "keywords": [
+        "acteurs",
+        "acteur",
+        "institutions",
+        "institutionnels",
+        "entreprises",
+        "entreprise",
+        "universités",
+        "université",
+        "académiques",
+        "académique",
+        "économiques",
+        "économique",
+        "associatifs",
+        "associatif",
+        "passerelle",
+        "passerelles",
+        "relation",
+        "relations",
+        "réseau",
+        "réseaux",
+        "lien",
+        "liens",
+        "relier"
+      ],
+      "answer": "Oui, c'est l'un des objectifs du mouvement : créer des passerelles avec les acteurs économiques, académiques, associatifs et institutionnels au Maroc.",
+      "links": [
+        {
+          "label": "Lire le manifeste",
+          "url": "/manifeste/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "mission",
+        "contribuer",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "articles",
+      "question": "Où trouver vos articles et actualités ?",
+      "variants": [
+        "où lire vos articles",
+        "avez-vous un blog",
+        "quelles sont vos actualités",
+        "dernières publications",
+        "où trouver les tribunes",
+        "quelles sont les nouveautés",
+        "je veux lire vos articles",
+        "où voir vos publications"
+      ],
+      "keywords": [
+        "article",
+        "articles",
+        "actualité",
+        "actualités",
+        "actu",
+        "blog",
+        "publication",
+        "publications",
+        "tribune",
+        "tribunes",
+        "lire",
+        "news",
+        "nouveauté",
+        "nouveautés",
+        "témoignage",
+        "témoignages",
+        "retours"
+      ],
+      "answer": "Retrouvez les parcours, tribunes, retours d'expérience et actualités du mouvement dans la rubrique Articles.",
+      "links": [
+        {
+          "label": "Voir les articles",
+          "url": "/articles/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "investir",
+        "lancement",
+        "langues"
+      ]
+    },
+    {
+      "id": "investir",
+      "question": "Comment investir au Maroc depuis l'étranger ?",
+      "variants": [
+        "je veux investir au maroc",
+        "investir au maroc depuis la france",
+        "aides pour investir au maroc",
+        "financement projet maroc",
+        "primes investissement maroc",
+        "charte de l'investissement",
+        "projet d'investissement diaspora",
+        "par où commencer pour investir",
+        "des aides pour monter un projet au maroc",
+        "aides financières pour un projet au maroc",
+        "subventions pour un projet au maroc"
+      ],
+      "keywords": [
+        "investir",
+        "investissement",
+        "investissements",
+        "investisseur",
+        "investisseurs",
+        "financement",
+        "financer",
+        "prime",
+        "primes",
+        "charte",
+        "subvention",
+        "subventions",
+        "diaspora",
+        "fonds"
+      ],
+      "answer": "Notre article « Diaspora marocaine : investir au Maroc, par où commencer ? » fait un tour d'horizon des principaux dispositifs accessibles aux Marocains établis à l'étranger : primes à l'investissement, solutions de financement, incitations de la Charte de l'investissement et accompagnement régional.",
+      "links": [
+        {
+          "label": "Lire l'article",
+          "url": "/articles/diaspora-marocaine-investir-au-maroc-par-où-commencer/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "articles",
+        "acteurs-maroc",
+        "contact"
+      ]
+    },
+    {
+      "id": "langues",
+      "question": "Le site est-il disponible en plusieurs langues ?",
+      "variants": [
+        "quelles langues parlez-vous",
+        "le site existe en anglais",
+        "le site est-il en arabe",
+        "version arabe",
+        "version anglaise",
+        "english version",
+        "site en français",
+        "changer de langue",
+        "traduction du site"
+      ],
+      "keywords": [
+        "langue",
+        "langues",
+        "français",
+        "anglais",
+        "arabe",
+        "english",
+        "arabic",
+        "version",
+        "traduit",
+        "traduction",
+        "disponible",
+        "multilingue",
+        "trilingue"
+      ],
+      "answer": "Oui, le site est disponible en français, en anglais et en arabe. Utilisez le sélecteur FR / EN / AR en haut de la page.",
+      "links": [],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "articles",
+        "contact",
+        "jisr-quoi"
+      ]
+    },
+    {
+      "id": "contact",
+      "question": "Comment contacter JISR ?",
+      "variants": [
+        "comment vous contacter",
+        "comment vous joindre",
+        "je veux vous écrire",
+        "je veux vous contacter",
+        "je voudrais parler à quelqu'un",
+        "parler à un humain",
+        "parler à une personne",
+        "avez-vous un formulaire de contact",
+        "proposition de partenariat",
+        "j'ai une question",
+        "poser une question à l'équipe",
+        "contactez-nous"
+      ],
+      "keywords": [
+        "contact",
+        "contacter",
+        "contactez",
+        "joindre",
+        "écrire",
+        "écrivez",
+        "message",
+        "mail",
+        "email",
+        "courriel",
+        "adresse",
+        "téléphone",
+        "numéro",
+        "appeler",
+        "équipe",
+        "partenariat",
+        "suggestion",
+        "répondre",
+        "proposition",
+        "parler",
+        "quelqu'un"
+      ],
+      "answer": "Écrivez-nous depuis la page Contact : une question, une idée, une proposition de partenariat… Nous utilisons votre message pour vous répondre.",
+      "links": [
+        {
+          "label": "Nous écrire",
+          "url": "/contact/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "donnees",
+        "articles"
+      ]
+    },
+    {
+      "id": "donnees",
+      "question": "Que faites-vous de mes données ?",
+      "variants": [
+        "que faites-vous de mes données",
+        "mes données sont-elles protégées",
+        "comment supprimer mes données",
+        "politique de confidentialité",
+        "utilisez-vous des cookies",
+        "rgpd",
+        "comment exercer mes droits",
+        "combien de temps gardez-vous mes données",
+        "qui a accès à mes données"
+      ],
+      "keywords": [
+        "données",
+        "donnée",
+        "rgpd",
+        "confidentialité",
+        "confidentiel",
+        "privée",
+        "vie",
+        "cookies",
+        "cookie",
+        "conserver",
+        "conservation",
+        "conservez",
+        "gardez",
+        "supprimer",
+        "suppression",
+        "effacer",
+        "effacement",
+        "droits",
+        "droit",
+        "personnelles",
+        "traitement",
+        "protégées",
+        "protection",
+        "netlify",
+        "hébergeur",
+        "tracking",
+        "suivi"
+      ],
+      "answer": "Via les formulaires « Rejoindre » et « Contact », nous collectons uniquement ce que vous saisissez (nom, email et, selon le formulaire, pays, domaine, sujet et message), pour traiter votre demande et vous répondre, avec votre consentement. Le site n'utilise pas de cookies de suivi. Vos données sont conservées au maximum 3 ans après notre dernier échange, et vous pouvez demander leur accès, leur correction ou leur suppression via la page Contact.",
+      "links": [
+        {
+          "label": "Politique de confidentialité",
+          "url": "/confidentialite/"
+        },
+        {
+          "label": "Nous écrire",
+          "url": "/contact/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "contact",
+        "politique"
+      ]
+    },
+    {
+      "id": "salutation",
+      "question": "Bonjour",
+      "variants": [
+        "bonjour",
+        "salut",
+        "bonsoir",
+        "hello",
+        "coucou",
+        "salam",
+        "marhaba",
+        "assalam alaykum"
+      ],
+      "keywords": [
+        "bonjour",
+        "salut",
+        "bonsoir",
+        "hello",
+        "hi",
+        "hey",
+        "coucou",
+        "salam",
+        "salamu",
+        "assalam",
+        "marhaba",
+        "allo",
+        "bienvenue",
+        "مرحبا",
+        "السلام",
+        "اهلا"
+      ],
+      "answer": "Bonjour ! Je suis l'assistant de JISR. Posez-moi une question sur le mouvement, ou choisissez un sujet ci-dessous.",
+      "links": [],
+      "featured": false,
+      "hidden": true,
+      "related": []
+    },
+    {
+      "id": "merci",
+      "question": "Merci",
+      "variants": [
+        "merci",
+        "merci beaucoup",
+        "au revoir",
+        "bonne journée",
+        "à bientôt"
+      ],
+      "keywords": [
+        "merci",
+        "remercie",
+        "remerciements",
+        "parfait",
+        "super",
+        "génial",
+        "excellent",
+        "bye",
+        "ciao",
+        "revoir",
+        "bientôt",
+        "شكرا",
+        "thanks"
+      ],
+      "answer": "Avec plaisir ! N'hésitez pas si vous avez d'autres questions.",
+      "links": [],
+      "featured": false,
+      "hidden": true,
+      "related": []
+    },
+    {
+      "id": "assistant",
+      "question": "Qui es-tu ?",
+      "variants": [
+        "qui es-tu",
+        "tu es qui",
+        "êtes-vous un robot",
+        "tu es un robot",
+        "es-tu une ia",
+        "êtes-vous une intelligence artificielle",
+        "tu es un humain",
+        "vous êtes humain",
+        "comment tu t'appelles",
+        "quel est ton nom",
+        "à qui je parle"
+      ],
+      "keywords": [
+        "robot",
+        "chatbot",
+        "bot",
+        "assistant",
+        "intelligence",
+        "artificielle",
+        "ia",
+        "mascotte",
+        "lion",
+        "humain"
+      ],
+      "answer": "Je suis l'assistant automatique de JISR. Je réponds uniquement à partir des informations publiées sur ce site. Pour parler à l'équipe, écrivez-nous depuis la page Contact.",
+      "links": [
+        {
+          "label": "Nous écrire",
+          "url": "/contact/"
+        }
+      ],
+      "featured": false,
+      "hidden": true,
+      "related": [
+        "jisr-quoi",
+        "contact"
+      ]
+    }
+  ]
+}

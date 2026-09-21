@@ -25,6 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..800&family=Public+Sans:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/style.css?v={{ build.time }}">
+  <link rel="stylesheet" href="/assets/css/chatbot.css?v={{ build.time }}">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -39,6 +40,7 @@
   {% include "partials/footer.njk" %}
 
   <script src="/assets/js/site.js?v={{ build.time }}" defer></script>
+  <script src="/assets/js/chatbot.js?v={{ build.time }}" defer data-faq="/chatbot/faq.{{ lang }}.json?v={{ build.time }}" data-img="/assets/img/" data-open="{{ faq[lang].ui.open }}" data-teaser="{{ faq[lang].ui.teaser }}"></script>
 
   <!-- Netlify Identity: makes the /admin publishing login work from invite emails -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

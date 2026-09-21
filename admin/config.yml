@@ -55,3 +55,451 @@ collections:
       - { label: "الكاتب", name: "author", widget: "string", default: "جسر - JISR", required: false }
       - { label: "صورة الكاتب", name: "authorPhoto", widget: "image", required: false, hint: "اختياري — يفضل استخدام صورة مربعة." }
       - { label: "المحتوى", name: "body", widget: "markdown" }
+
+  - name: faq
+    label: Assistant — FAQ du chatbot
+    files:
+    - name: faq_fr
+      label: FAQ · Français
+      file: src/_data/faq/fr.json
+      format: json
+      fields:
+      - label: Textes de l'interface
+        name: ui
+        widget: object
+        collapsed: true
+        fields:
+        - label: Nom de l'assistant
+          name: botName
+          widget: string
+        - label: Titre de la fenêtre
+          name: title
+          widget: string
+        - label: Ligne d'état (sous le titre)
+          name: status
+          widget: string
+        - label: Petite bulle d'invitation
+          name: teaser
+          widget: string
+        - label: Texte du bouton d'ouverture (accessibilité)
+          name: open
+          widget: string
+        - label: Texte du bouton de fermeture
+          name: close
+          widget: string
+        - label: Message d'accueil
+          name: welcome
+          widget: text
+        - label: Titre des suggestions
+          name: suggestionsTitle
+          widget: string
+        - label: Titre des questions liées
+          name: relatedTitle
+          widget: string
+        - label: Texte du champ de saisie
+          name: placeholder
+          widget: string
+        - label: Texte du bouton Envoyer
+          name: send
+          widget: string
+        - label: Réponse quand l'assistant ne sait pas
+          name: fallback
+          widget: text
+        - label: Lien proposé dans ce cas
+          name: fallbackLink
+          widget: object
+          fields:
+          - label: Texte du bouton
+            name: label
+            widget: string
+          - label: Adresse
+            name: url
+            widget: string
+        - label: « Vous pensiez à… »
+          name: didYouMean
+          widget: string
+        - label: Avertissement sous la saisie
+          name: disclaimer
+          widget: text
+        - label: Texte « l'assistant écrit »
+          name: typing
+          widget: string
+        - label: Texte « Nouvelle conversation »
+          name: restart
+          widget: string
+        - label: Message si la question est trop courte
+          name: tooShort
+          widget: string
+      - label: Sujets non documentés
+        name: blockers
+        widget: list
+        required: false
+        field:
+          label: Mot ou expression
+          name: v
+          widget: string
+        hint: 'Si la question contient l''un de ces mots (ex : cotisation, événement), l''assistant renvoie vers le contact au lieu de répondre à côté. Retirez un mot quand vous ajoutez la réponse correspondante.'
+      - label: Questions et réponses
+        name: items
+        widget: list
+        label_singular: Question
+        summary: '{{fields.question}}'
+        fields:
+        - label: Identifiant
+          name: id
+          widget: string
+          hint: 'Unique, en minuscules sans espace (ex : mission). Ne le changez pas s''il est cité dans « Questions liées ».'
+        - label: Question (texte des boutons)
+          name: question
+          widget: string
+        - label: Autres formulations
+          name: variants
+          widget: list
+          required: false
+          field:
+            label: Formulation
+            name: v
+            widget: string
+          hint: Comment un visiteur pourrait poser la même question. 5 à 10 exemples, écrits comme il les taperait.
+        - label: Mots-clés
+          name: keywords
+          widget: list
+          required: false
+          field:
+            label: Mot-clé
+            name: v
+            widget: string
+          hint: Mots simples qui reconnaissent la question. L'assistant ignore accents et majuscules. Évitez les mots trop courants.
+        - label: Réponse
+          name: answer
+          widget: text
+          hint: Texte simple, 2 à 3 phrases. Un retour à la ligne = un nouveau paragraphe.
+        - label: Boutons-liens sous la réponse
+          name: links
+          widget: list
+          required: false
+          fields:
+          - label: Texte du bouton
+            name: label
+            widget: string
+          - label: Adresse (commence par /)
+            name: url
+            widget: string
+            pattern:
+            - ^/
+            - Doit commencer par /
+        - label: Proposée dans les suggestions de départ
+          name: featured
+          widget: boolean
+          default: false
+          required: false
+        - label: Réponse interne (jamais proposée en suggestion)
+          name: hidden
+          widget: boolean
+          default: false
+          required: false
+        - label: Questions liées (identifiants)
+          name: related
+          widget: list
+          required: false
+          field:
+            label: Identifiant
+            name: v
+            widget: string
+          hint: Jusqu'à 3 identifiants proposés après la réponse.
+    - name: faq_en
+      label: FAQ · English
+      file: src/_data/faq/en.json
+      format: json
+      fields:
+      - label: Textes de l'interface
+        name: ui
+        widget: object
+        collapsed: true
+        fields:
+        - label: Nom de l'assistant
+          name: botName
+          widget: string
+        - label: Titre de la fenêtre
+          name: title
+          widget: string
+        - label: Ligne d'état (sous le titre)
+          name: status
+          widget: string
+        - label: Petite bulle d'invitation
+          name: teaser
+          widget: string
+        - label: Texte du bouton d'ouverture (accessibilité)
+          name: open
+          widget: string
+        - label: Texte du bouton de fermeture
+          name: close
+          widget: string
+        - label: Message d'accueil
+          name: welcome
+          widget: text
+        - label: Titre des suggestions
+          name: suggestionsTitle
+          widget: string
+        - label: Titre des questions liées
+          name: relatedTitle
+          widget: string
+        - label: Texte du champ de saisie
+          name: placeholder
+          widget: string
+        - label: Texte du bouton Envoyer
+          name: send
+          widget: string
+        - label: Réponse quand l'assistant ne sait pas
+          name: fallback
+          widget: text
+        - label: Lien proposé dans ce cas
+          name: fallbackLink
+          widget: object
+          fields:
+          - label: Texte du bouton
+            name: label
+            widget: string
+          - label: Adresse
+            name: url
+            widget: string
+        - label: « Vous pensiez à… »
+          name: didYouMean
+          widget: string
+        - label: Avertissement sous la saisie
+          name: disclaimer
+          widget: text
+        - label: Texte « l'assistant écrit »
+          name: typing
+          widget: string
+        - label: Texte « Nouvelle conversation »
+          name: restart
+          widget: string
+        - label: Message si la question est trop courte
+          name: tooShort
+          widget: string
+      - label: Sujets non documentés
+        name: blockers
+        widget: list
+        required: false
+        field:
+          label: Mot ou expression
+          name: v
+          widget: string
+        hint: 'Si la question contient l''un de ces mots (ex : cotisation, événement), l''assistant renvoie vers le contact au lieu de répondre à côté. Retirez un mot quand vous ajoutez la réponse correspondante.'
+      - label: Questions et réponses
+        name: items
+        widget: list
+        label_singular: Question
+        summary: '{{fields.question}}'
+        fields:
+        - label: Identifiant
+          name: id
+          widget: string
+          hint: 'Unique, en minuscules sans espace (ex : mission). Ne le changez pas s''il est cité dans « Questions liées ».'
+        - label: Question (texte des boutons)
+          name: question
+          widget: string
+        - label: Autres formulations
+          name: variants
+          widget: list
+          required: false
+          field:
+            label: Formulation
+            name: v
+            widget: string
+          hint: Comment un visiteur pourrait poser la même question. 5 à 10 exemples, écrits comme il les taperait.
+        - label: Mots-clés
+          name: keywords
+          widget: list
+          required: false
+          field:
+            label: Mot-clé
+            name: v
+            widget: string
+          hint: Mots simples qui reconnaissent la question. L'assistant ignore accents et majuscules. Évitez les mots trop courants.
+        - label: Réponse
+          name: answer
+          widget: text
+          hint: Texte simple, 2 à 3 phrases. Un retour à la ligne = un nouveau paragraphe.
+        - label: Boutons-liens sous la réponse
+          name: links
+          widget: list
+          required: false
+          fields:
+          - label: Texte du bouton
+            name: label
+            widget: string
+          - label: Adresse (commence par /)
+            name: url
+            widget: string
+            pattern:
+            - ^/
+            - Doit commencer par /
+        - label: Proposée dans les suggestions de départ
+          name: featured
+          widget: boolean
+          default: false
+          required: false
+        - label: Réponse interne (jamais proposée en suggestion)
+          name: hidden
+          widget: boolean
+          default: false
+          required: false
+        - label: Questions liées (identifiants)
+          name: related
+          widget: list
+          required: false
+          field:
+            label: Identifiant
+            name: v
+            widget: string
+          hint: Jusqu'à 3 identifiants proposés après la réponse.
+    - name: faq_ar
+      label: FAQ · العربية
+      file: src/_data/faq/ar.json
+      format: json
+      fields:
+      - label: Textes de l'interface
+        name: ui
+        widget: object
+        collapsed: true
+        fields:
+        - label: Nom de l'assistant
+          name: botName
+          widget: string
+        - label: Titre de la fenêtre
+          name: title
+          widget: string
+        - label: Ligne d'état (sous le titre)
+          name: status
+          widget: string
+        - label: Petite bulle d'invitation
+          name: teaser
+          widget: string
+        - label: Texte du bouton d'ouverture (accessibilité)
+          name: open
+          widget: string
+        - label: Texte du bouton de fermeture
+          name: close
+          widget: string
+        - label: Message d'accueil
+          name: welcome
+          widget: text
+        - label: Titre des suggestions
+          name: suggestionsTitle
+          widget: string
+        - label: Titre des questions liées
+          name: relatedTitle
+          widget: string
+        - label: Texte du champ de saisie
+          name: placeholder
+          widget: string
+        - label: Texte du bouton Envoyer
+          name: send
+          widget: string
+        - label: Réponse quand l'assistant ne sait pas
+          name: fallback
+          widget: text
+        - label: Lien proposé dans ce cas
+          name: fallbackLink
+          widget: object
+          fields:
+          - label: Texte du bouton
+            name: label
+            widget: string
+          - label: Adresse
+            name: url
+            widget: string
+        - label: « Vous pensiez à… »
+          name: didYouMean
+          widget: string
+        - label: Avertissement sous la saisie
+          name: disclaimer
+          widget: text
+        - label: Texte « l'assistant écrit »
+          name: typing
+          widget: string
+        - label: Texte « Nouvelle conversation »
+          name: restart
+          widget: string
+        - label: Message si la question est trop courte
+          name: tooShort
+          widget: string
+      - label: Sujets non documentés
+        name: blockers
+        widget: list
+        required: false
+        field:
+          label: Mot ou expression
+          name: v
+          widget: string
+        hint: 'Si la question contient l''un de ces mots (ex : cotisation, événement), l''assistant renvoie vers le contact au lieu de répondre à côté. Retirez un mot quand vous ajoutez la réponse correspondante.'
+      - label: Questions et réponses
+        name: items
+        widget: list
+        label_singular: Question
+        summary: '{{fields.question}}'
+        fields:
+        - label: Identifiant
+          name: id
+          widget: string
+          hint: 'Unique, en minuscules sans espace (ex : mission). Ne le changez pas s''il est cité dans « Questions liées ».'
+        - label: Question (texte des boutons)
+          name: question
+          widget: string
+        - label: Autres formulations
+          name: variants
+          widget: list
+          required: false
+          field:
+            label: Formulation
+            name: v
+            widget: string
+          hint: Comment un visiteur pourrait poser la même question. 5 à 10 exemples, écrits comme il les taperait.
+        - label: Mots-clés
+          name: keywords
+          widget: list
+          required: false
+          field:
+            label: Mot-clé
+            name: v
+            widget: string
+          hint: Mots simples qui reconnaissent la question. L'assistant ignore accents et majuscules. Évitez les mots trop courants.
+        - label: Réponse
+          name: answer
+          widget: text
+          hint: Texte simple, 2 à 3 phrases. Un retour à la ligne = un nouveau paragraphe.
+        - label: Boutons-liens sous la réponse
+          name: links
+          widget: list
+          required: false
+          fields:
+          - label: Texte du bouton
+            name: label
+            widget: string
+          - label: Adresse (commence par /)
+            name: url
+            widget: string
+            pattern:
+            - ^/
+            - Doit commencer par /
+        - label: Proposée dans les suggestions de départ
+          name: featured
+          widget: boolean
+          default: false
+          required: false
+        - label: Réponse interne (jamais proposée en suggestion)
+          name: hidden
+          widget: boolean
+          default: false
+          required: false
+        - label: Questions liées (identifiants)
+          name: related
+          widget: list
+          required: false
+          field:
+            label: Identifiant
+            name: v
+            widget: string
+          hint: Jusqu'à 3 identifiants proposés après la réponse.

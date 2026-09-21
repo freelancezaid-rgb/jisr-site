@@ -1,0 +1,9 @@
+---
+pagination:
+  data: faqLangs
+  size: 1
+  alias: chatLang
+permalink: "/chatbot/faq.{{ chatLang }}.json"
+eleventyExcludeFromCollections: true
+---
+{{ faq[chatLang] | dump | safe }}

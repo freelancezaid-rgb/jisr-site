@@ -1,0 +1,872 @@
+{
+  "ui": {
+    "botName": "JISR Assistant",
+    "title": "JISR Assistant",
+    "status": "Automatic answers",
+    "teaser": "A question about JISR?",
+    "open": "Open the assistant",
+    "close": "Close the assistant",
+    "welcome": "Hello! I answer questions about JISR. Pick a topic or type your question.",
+    "suggestionsTitle": "Frequently asked questions",
+    "relatedTitle": "You can also ask",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "fallback": "I don't have the answer to that. Pick a topic below, or write to us directly.",
+    "fallbackLink": {
+      "label": "Write to us",
+      "url": "/en/contact/"
+    },
+    "didYouMean": "Maybe you meant:",
+    "disclaimer": "Automated assistant: it only answers from the information published on this site.",
+    "typing": "The assistant is typing…",
+    "restart": "New conversation",
+    "tooShort": "Please type your question in a few words."
+  },
+  "blockers": [
+    "fee",
+    "fees",
+    "cost",
+    "costs",
+    "price",
+    "prices",
+    "pricing",
+    "free",
+    "paid",
+    "membership",
+    "event",
+    "events",
+    "meetup",
+    "meetups",
+    "conference",
+    "conferences",
+    "volunteer",
+    "volunteers",
+    "volunteering",
+    "founder",
+    "founders",
+    "founded",
+    "president",
+    "donate",
+    "donation",
+    "donations",
+    "legal status",
+    "headquarters",
+    "employee",
+    "employees",
+    "salary"
+  ],
+  "items": [
+    {
+      "id": "jisr-quoi",
+      "question": "What is JISR?",
+      "variants": [
+        "what is jisr",
+        "who is jisr",
+        "who are you",
+        "tell me about jisr",
+        "about jisr",
+        "introduce jisr",
+        "what is this movement",
+        "what is this about"
+      ],
+      "keywords": [
+        "presentation",
+        "introduce",
+        "introduction",
+        "about",
+        "movement",
+        "association",
+        "organization",
+        "organisation",
+        "definition",
+        "jisr",
+        "explain"
+      ],
+      "answer": "JISR - جسر is an independent, non-political movement whose ambition is to build bridges between Moroccans living abroad and Morocco, placing skills, experience and ideas at the heart of its approach.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "mission",
+        "principes",
+        "politique"
+      ]
+    },
+    {
+      "id": "signification",
+      "question": "What does “JISR” mean?",
+      "variants": [
+        "what does jisr mean",
+        "what does jisr stand for",
+        "meaning of jisr",
+        "jisr meaning",
+        "why this name",
+        "where does the name come from",
+        "what does this word mean",
+        "what does the name mean"
+      ],
+      "keywords": [
+        "mean",
+        "means",
+        "meaning",
+        "signify",
+        "stand",
+        "name",
+        "bridge",
+        "etymology",
+        "origin",
+        "word",
+        "chose",
+        "choose"
+      ],
+      "answer": "“Jisr” (جسر) means “bridge” in Arabic. It is the image of the movement: creating links between Moroccans worldwide, and with Morocco.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "jisr-quoi",
+        "mission"
+      ]
+    },
+    {
+      "id": "mission",
+      "question": "What is the movement's mission?",
+      "variants": [
+        "what is your mission",
+        "what are your goals",
+        "what are your objectives",
+        "what does jisr do",
+        "what do you do",
+        "what is the purpose of jisr",
+        "why jisr",
+        "what is your ambition",
+        "what is your role"
+      ],
+      "keywords": [
+        "mission",
+        "goal",
+        "goals",
+        "objective",
+        "objectives",
+        "purpose",
+        "aim",
+        "aims",
+        "ambition",
+        "role",
+        "why",
+        "vision",
+        "projects",
+        "actions"
+      ],
+      "answer": "To build bridges between Moroccans living abroad and Morocco by sharing ideas and bringing skills closer together. JISR wants to facilitate these connections, highlight these journeys, and build bridges with economic, academic, community and institutional stakeholders in Morocco.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "principes",
+        "acteurs-maroc",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "principes",
+      "question": "What are JISR's four principles?",
+      "variants": [
+        "what are your principles",
+        "what are your values",
+        "connect contribute share act",
+        "the four principles",
+        "the 4 principles",
+        "explain the principles",
+        "what are the movement's principles"
+      ],
+      "keywords": [
+        "principle",
+        "principles",
+        "value",
+        "values",
+        "pillar",
+        "pillars",
+        "four",
+        "manifesto",
+        "charter",
+        "4"
+      ],
+      "answer": "The movement is built around four principles:\n1. Connect: create links between Moroccans worldwide, regardless of country, field or generation — and with stakeholders in Morocco.\n2. Contribute: mobilize everyone's skills and experience, one-off or ongoing, for concrete projects that benefit Morocco.\n3. Share: circulate knowledge, journeys and best practices between peers, generations and regions.\n4. Act: go beyond intentions, start and support concrete initiatives, with and for Morocco.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "mission",
+        "contribuer",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "politique",
+      "question": "Is JISR a political party?",
+      "variants": [
+        "is jisr a political party",
+        "are you a political party",
+        "are you affiliated with a party",
+        "is jisr non-political",
+        "is jisr political",
+        "what is your political position",
+        "do you take political positions",
+        "is jisr neutral",
+        "are you independent"
+      ],
+      "keywords": [
+        "political",
+        "politics",
+        "party",
+        "parties",
+        "apolitical",
+        "independent",
+        "neutral",
+        "neutrality",
+        "election",
+        "elections",
+        "government",
+        "opinion",
+        "position",
+        "affiliated",
+        "affiliation",
+        "ideology"
+      ],
+      "answer": "No. JISR is independent and non-political: it is not affiliated with any party or political organization, and does not act on behalf of any institution. It therefore does not take positions on political topics.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "porte-parole",
+        "jisr-quoi",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "porte-parole",
+      "question": "Does JISR speak on behalf of all Moroccans worldwide?",
+      "variants": [
+        "does jisr represent all moroccans",
+        "do you speak on behalf of all moroccans",
+        "are you representative",
+        "who do you represent",
+        "are you a spokesperson",
+        "on whose behalf do you speak"
+      ],
+      "keywords": [
+        "represent",
+        "represents",
+        "representative",
+        "representation",
+        "spokesperson",
+        "spokesman",
+        "behalf",
+        "legitimacy",
+        "legitimate",
+        "voice"
+      ],
+      "answer": "No. JISR does not claim to speak on behalf of all Moroccans around the world. Above all, it aims to create an open space for those who wish to share their experience, skills and ideas in service of Morocco.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "politique",
+        "mission",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "lancement",
+      "question": "When was JISR launched?",
+      "variants": [
+        "when was jisr created",
+        "when did jisr start",
+        "since when do you exist",
+        "launch date",
+        "date of creation",
+        "when was the movement launched",
+        "when was the statement published",
+        "how old is jisr"
+      ],
+      "keywords": [
+        "launch",
+        "launched",
+        "launching",
+        "created",
+        "creation",
+        "when",
+        "since",
+        "date",
+        "statement",
+        "announced",
+        "announcement",
+        "started",
+        "start",
+        "began"
+      ],
+      "answer": "JISR announced its launch in a statement published in Paris on August 19, 2026.",
+      "links": [
+        {
+          "label": "Read the launch statement",
+          "url": "/en/articles/communique-de-lancement/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "jisr-quoi",
+        "articles",
+        "mission"
+      ]
+    },
+    {
+      "id": "qui-rejoindre",
+      "question": "Who can join JISR?",
+      "variants": [
+        "who can join",
+        "who can take part",
+        "can i join jisr",
+        "am i eligible",
+        "what profiles are you looking for",
+        "open to whom",
+        "i am a doctor can i join",
+        "i am a student can i take part"
+      ],
+      "keywords": [
+        "eligible",
+        "eligibility",
+        "profile",
+        "profiles",
+        "open",
+        "doctor",
+        "doctors",
+        "engineer",
+        "engineers",
+        "entrepreneur",
+        "entrepreneurs",
+        "researcher",
+        "researchers",
+        "lawyer",
+        "lawyers",
+        "student",
+        "students"
+      ],
+      "answer": "Doctors, engineers, entrepreneurs, researchers, lawyers, students, or people passionate about another field: your journey has a place at JISR. The movement creates links between Moroccans worldwide, regardless of country, field or generation.",
+      "links": [
+        {
+          "label": "Join JISR",
+          "url": "/en/join/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "contribuer",
+        "donnees"
+      ]
+    },
+    {
+      "id": "comment-rejoindre",
+      "question": "How do I join the movement?",
+      "variants": [
+        "how to join",
+        "how can i join",
+        "how do i join jisr",
+        "i want to join jisr",
+        "i want to take part",
+        "how to become a member",
+        "how do i sign up",
+        "how to register",
+        "where do i sign up",
+        "application form",
+        "how do i apply"
+      ],
+      "keywords": [
+        "join",
+        "joining",
+        "joined",
+        "register",
+        "registration",
+        "sign",
+        "signup",
+        "apply",
+        "application",
+        "applicant",
+        "form"
+      ],
+      "answer": "Just fill in the form on the “Join” page: tell us who you are and how you'd like to contribute.",
+      "links": [
+        {
+          "label": "Join JISR",
+          "url": "/en/join/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "qui-rejoindre",
+        "donnees",
+        "contact"
+      ]
+    },
+    {
+      "id": "contribuer",
+      "question": "How can I contribute?",
+      "variants": [
+        "how to contribute",
+        "how can i help",
+        "how can i support jisr",
+        "i want to help",
+        "i would like to contribute",
+        "how can i get involved",
+        "how can i use my skills",
+        "how to get involved"
+      ],
+      "keywords": [
+        "contribute",
+        "contribution",
+        "contributing",
+        "help",
+        "helping",
+        "involved",
+        "involvement",
+        "skills",
+        "skill",
+        "experience",
+        "ideas",
+        "idea",
+        "engage",
+        "engagement",
+        "concretely",
+        "offer",
+        "expertise"
+      ],
+      "answer": "Everyone can contribute with their skills, experience and ideas, one-off or ongoing, on concrete projects for Morocco. To get started, fill in the form on the “Join” page and tell us how you'd like to contribute.",
+      "links": [
+        {
+          "label": "Join JISR",
+          "url": "/en/join/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "principes",
+        "acteurs-maroc"
+      ]
+    },
+    {
+      "id": "acteurs-maroc",
+      "question": "Does JISR connect people with organizations in Morocco?",
+      "variants": [
+        "does jisr build links with morocco",
+        "do you work with institutions",
+        "which stakeholders do you work with",
+        "can jisr put me in touch with companies in morocco",
+        "networking",
+        "bridges with morocco",
+        "network in morocco"
+      ],
+      "keywords": [
+        "stakeholders",
+        "stakeholder",
+        "institutions",
+        "institutional",
+        "companies",
+        "company",
+        "universities",
+        "university",
+        "academic",
+        "economic",
+        "community",
+        "bridges",
+        "connect",
+        "connections",
+        "networking",
+        "network",
+        "link",
+        "links",
+        "relation",
+        "relations"
+      ],
+      "answer": "Yes, that is one of its goals: to build links with economic, academic, community and institutional stakeholders in Morocco.",
+      "links": [
+        {
+          "label": "Read the manifesto",
+          "url": "/en/manifesto/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "mission",
+        "contribuer",
+        "comment-rejoindre"
+      ]
+    },
+    {
+      "id": "articles",
+      "question": "Where can I find your articles and news?",
+      "variants": [
+        "where can i read your articles",
+        "do you have a blog",
+        "what is your latest news",
+        "latest publications",
+        "where are the opinion pieces",
+        "i want to read your articles",
+        "where to find your publications"
+      ],
+      "keywords": [
+        "article",
+        "articles",
+        "news",
+        "blog",
+        "publication",
+        "publications",
+        "opinion",
+        "read",
+        "newest",
+        "latest",
+        "stories",
+        "testimonials"
+      ],
+      "answer": "You'll find journeys, opinion pieces, feedback and news from the movement in the Articles section.",
+      "links": [
+        {
+          "label": "See the articles",
+          "url": "/en/articles/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "investir",
+        "lancement",
+        "langues"
+      ]
+    },
+    {
+      "id": "investir",
+      "question": "How can I invest in Morocco from abroad?",
+      "variants": [
+        "i want to invest in morocco",
+        "investing in morocco from abroad",
+        "help to invest in morocco",
+        "funding for projects in morocco",
+        "investment incentives",
+        "investment charter",
+        "diaspora investment",
+        "where to start investing"
+      ],
+      "keywords": [
+        "invest",
+        "investing",
+        "investment",
+        "investments",
+        "investor",
+        "investors",
+        "funding",
+        "fund",
+        "financing",
+        "finance",
+        "incentive",
+        "incentives",
+        "charter",
+        "diaspora"
+      ],
+      "answer": "Our article “Moroccan Diaspora: Looking to Invest in Morocco? Here’s Where to Start” gives an overview of the tools available to the diaspora: dedicated funding schemes, Investment Charter incentives and regional support.",
+      "links": [
+        {
+          "label": "Read the article",
+          "url": "/en/articles/moroccan-diaspora-looking-to-invest-in-morocco-here’s-where-to-start/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "articles",
+        "acteurs-maroc",
+        "contact"
+      ]
+    },
+    {
+      "id": "langues",
+      "question": "Is the site available in several languages?",
+      "variants": [
+        "what languages do you speak",
+        "is the site in english",
+        "is the site in arabic",
+        "arabic version",
+        "french version",
+        "english version",
+        "change language",
+        "translation of the site"
+      ],
+      "keywords": [
+        "language",
+        "languages",
+        "french",
+        "english",
+        "arabic",
+        "version",
+        "translated",
+        "translation",
+        "available",
+        "multilingual"
+      ],
+      "answer": "Yes, the site is available in French, English and Arabic. Use the FR / EN / AR switch at the top of the page.",
+      "links": [],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "articles",
+        "contact",
+        "jisr-quoi"
+      ]
+    },
+    {
+      "id": "contact",
+      "question": "How can I contact JISR?",
+      "variants": [
+        "how can i contact you",
+        "how to reach you",
+        "i want to write to you",
+        "i want to contact you",
+        "i would like to talk to someone",
+        "talk to a human",
+        "talk to a person",
+        "do you have a contact form",
+        "partnership proposal",
+        "i have a question",
+        "contact us"
+      ],
+      "keywords": [
+        "contact",
+        "contacting",
+        "reach",
+        "write",
+        "message",
+        "mail",
+        "email",
+        "address",
+        "phone",
+        "number",
+        "call",
+        "team",
+        "partnership",
+        "suggestion",
+        "proposal",
+        "respond"
+      ],
+      "answer": "Write to us from the Contact page: a question, an idea, a partnership proposal… We use your message to get back to you.",
+      "links": [
+        {
+          "label": "Write to us",
+          "url": "/en/contact/"
+        }
+      ],
+      "featured": true,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "donnees",
+        "articles"
+      ]
+    },
+    {
+      "id": "donnees",
+      "question": "What do you do with my data?",
+      "variants": [
+        "what do you do with my data",
+        "is my data protected",
+        "how do i delete my data",
+        "privacy policy",
+        "do you use cookies",
+        "gdpr",
+        "how to exercise my rights",
+        "how long do you keep my data",
+        "who has access to my data"
+      ],
+      "keywords": [
+        "data",
+        "gdpr",
+        "privacy",
+        "private",
+        "cookies",
+        "cookie",
+        "retention",
+        "keep",
+        "kept",
+        "delete",
+        "deletion",
+        "erase",
+        "erasure",
+        "rights",
+        "right",
+        "personal",
+        "processing",
+        "protected",
+        "protection",
+        "netlify",
+        "hosting",
+        "tracking"
+      ],
+      "answer": "Through the “Join” and “Contact” forms, we only collect what you enter (name, email and, depending on the form, country, field, subject and message), to process your request and reply to you, with your consent. This site does not use tracking cookies. Your data is kept for a maximum of 3 years after our last exchange, and you can ask to access, correct or delete it through the Contact page.",
+      "links": [
+        {
+          "label": "Privacy policy",
+          "url": "/en/privacy/"
+        },
+        {
+          "label": "Write to us",
+          "url": "/en/contact/"
+        }
+      ],
+      "featured": false,
+      "hidden": false,
+      "related": [
+        "comment-rejoindre",
+        "contact",
+        "politique"
+      ]
+    },
+    {
+      "id": "salutation",
+      "question": "Hello",
+      "variants": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good evening",
+        "salam",
+        "marhaba",
+        "assalam alaykum"
+      ],
+      "keywords": [
+        "hello",
+        "hi",
+        "hey",
+        "morning",
+        "evening",
+        "salam",
+        "assalam",
+        "marhaba",
+        "welcome",
+        "bonjour",
+        "salut",
+        "مرحبا",
+        "السلام",
+        "اهلا"
+      ],
+      "answer": "Hello! I'm the JISR assistant. Ask me a question about the movement, or pick a topic below.",
+      "links": [],
+      "featured": false,
+      "hidden": true,
+      "related": []
+    },
+    {
+      "id": "merci",
+      "question": "Thank you",
+      "variants": [
+        "thank you",
+        "thanks",
+        "thanks a lot",
+        "goodbye",
+        "bye",
+        "have a nice day"
+      ],
+      "keywords": [
+        "thanks",
+        "thank",
+        "thankyou",
+        "great",
+        "perfect",
+        "awesome",
+        "excellent",
+        "bye",
+        "goodbye",
+        "cheers",
+        "merci",
+        "شكرا"
+      ],
+      "answer": "You're welcome! Feel free to ask if you have other questions.",
+      "links": [],
+      "featured": false,
+      "hidden": true,
+      "related": []
+    },
+    {
+      "id": "assistant",
+      "question": "Who am I talking to?",
+      "variants": [
+        "who am i talking to",
+        "are you a robot",
+        "are you human",
+        "are you a bot",
+        "are you an ai",
+        "what is your name",
+        "are you a real person"
+      ],
+      "keywords": [
+        "robot",
+        "chatbot",
+        "bot",
+        "assistant",
+        "ai",
+        "artificial",
+        "intelligence",
+        "mascot",
+        "lion",
+        "human"
+      ],
+      "answer": "I'm JISR's automated assistant. I only answer from the information published on this site. To talk to the team, write to us from the Contact page.",
+      "links": [
+        {
+          "label": "Write to us",
+          "url": "/en/contact/"
+        }
+      ],
+      "featured": false,
+      "hidden": true,
+      "related": [
+        "jisr-quoi",
+        "contact"
+      ]
+    }
+  ]
+}
